@@ -10,12 +10,13 @@ import org.springframework.web.bind.annotation.*;
 public class PaymentController {
 
 
+
     @GetMapping("/{id}")
-    public PaymentResponseDto getPayment(@PathVariable String invoiceId) {
+    public PaymentResponseDto getPayment(@PathVariable("id") String invoiceId) {
         return null;
     }
 
-    @PostMapping
+    @PostMapping("/process")
     public PaymentResponseDto processPayment(@RequestBody PaymentRequestDto dto) {
 
         // save payment
